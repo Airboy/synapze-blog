@@ -1,0 +1,21 @@
+doctype
+  head
+    title title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="icon", href="/assets/img/global/favicon.ico")
+    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+    meta(name="keywords", content="synapze, blog about web technologies, code, node.js, javascript, think tank and thinker")
+    meta(name="author", content="R. FONCIER")
+    link(rel="stylesheet", type="text/css", href="/assets/css/main.css")
+
+  <body>  
+    include "_includes/_header"
+    #main-content(role="content")
+      .container
+        .row
+          .col-md-9
+            #poster-wrapper
+              != yield
+          .col-md-3
+            include "_includes/_rightpart"
+    include "_includes/_footer"
