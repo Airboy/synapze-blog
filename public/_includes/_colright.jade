@@ -1,0 +1,13 @@
+#cr-container
+  #cr-presentation
+    p 
+      | WELCOME ON 
+      i.redfc #{name.toUpperCase()}
+      | . A BLOG WHICH TALK ABOUT WEB TECHNOLOGIES, NODE.JS, ... AND A LOT OF INTERESTING TOPICS.
+  #cr-lister
+    .cr-lister-item
+      p
+        strong LAST ARTICLES
+      ul
+        each article in public.articles._data
+          li: a(href="/articles/#{article.slug}") #{article.title}

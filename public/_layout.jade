@@ -8,8 +8,8 @@ html(lang="en")
     meta(name="keywords", content="synapze, blog about web technologies, code, node.js, javascript, think tank and thinker")
     meta(name="author", content="R. FONCIER")
     link(rel="stylesheet", type="text/css", href="/assets/css/main.css")
-
-  body  
+  
+  body
     include _includes/_header
     #main-content(role="content")
       .container
@@ -18,5 +18,5 @@ html(lang="en")
             #poster-wrapper
               != yield
           .col-md-3
-            p Hello
+            include _includes/_colright
     include _includes/_footer
