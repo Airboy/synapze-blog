@@ -1,0 +1,139 @@
+/* CSS - Main
+ * Date of creation : 22/02/2014
+ * Creator : Romain FONCIER
+ * target : all
+ * comment :
+ *
+ * ------------------------------------------------------- */
+
+/* Bootstrap Import */
+@import "bootstrap/bootstrap";
+
+/* Color palette */
+@mred: #e74c3c;
+
+/* Color classes */
+.redfc { color: @mred; }
+
+
+/* Custom Soft reset */
+html, body, p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html {
+  background-color: #E9EAE4;
+  font-family: "Open Sans", Helvetica, arial, serif;
+  font-weight: 300;
+}
+
+body{
+  background: #E9EAE4; // Override TWBS settings
+  text-align: center;
+  color: #444;
+  margin: 0;
+}
+
+h1{
+  font-size: 65px;
+  line-height: 1.2em;
+  border-bottom: #CCC solid 1px;
+  padding: 20px 0;
+}
+
+h3{
+  font-weight: 300;
+}
+
+a, a:visited, a:active {
+    -webkit-transition: color 0.3s linear 0s;
+    -moz-transition: color 0.3s linear 0s;
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+/* Header */
+#header-wrapper {
+  //background-image: url("@{textures}/navy_blue.png");
+  .navbar {
+    margin-bottom: 0;
+    .navbar-brand {
+      font-family: "Calibri", Helvetica, arial, serif;
+      font-weight: bold;
+      color: #fff;
+    }
+    .navbar-nav li.active {
+      border-bottom: 2px solid #e74c3c;
+      background: rgba(255, 255, 255, 0.1);
+      font-weight: bold;
+    }
+  }
+}
+
+/* Main content */
+#main-content {
+  margin: 50px 0 20px 0;
+  #poster-wrapper {
+    padding: 20px;
+    .box-shadow(0px 4px 6px 1px rgba(0, 0, 0, 0.2));
+    background-color: #fff;
+    .border-top-radius(2px);
+    .border-bottom-radius(2px);
+
+    // ARTICLE LISTER
+    #article-lister {
+      text-align: left;
+      .article-item {
+        margin: 10px 0 20px 0;
+        .article-item-title a {
+          font-size: 22px;
+        }
+        .article-item-body {
+          padding: 15px 0 5px 0;
+          border-top: 1px solid #ddd;
+        }
+        .article-item-tags {
+          padding: 5px 0;
+          border-bottom: 1px solid #eee;
+        }
+        .article-item-footer {
+          margin-top: 5px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  // RIGHT-PART
+  #rp-container {
+    #rp-presentation {
+      margin-bottom: 50px;
+      p {
+        font-size: 13px;
+        color: #777;
+      }
+    }
+    #rp-lister {
+      .rp-lister-item {
+        margin: 20px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        p {
+          font-size: 14px;
+          color: #555;
+        }
+      }
+      ul li {
+        text-align: left;
+      }
+    }
+  }
+}
