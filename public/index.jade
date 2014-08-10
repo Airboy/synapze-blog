@@ -3,23 +3,13 @@
     each article in public.articles._data
       li.article-item
         .article-item-title
-          a(href="/articles/<%= article %>"><%= articles[article].title %></a>
-        </div>
-        <div class="article-item-body">
-          <p><%= articles[article].excerpt %></p>
-        </div>
-        <div class="article-item-tags">
-          <%
-          var tags = articles[article].tags;
-          for (var tag in tags) {
-          %>
-          <span class="label label-warning"><%= tags[tag] %></span>
-          <% } %>
-        </div>
-        <div class="article-item-footer">
-          <p><strong>POSTED BY <span class="redfc"><%= articles[article].authors %></span> - <%= new Date(articles[article].date).toDateString() %></strong></p>
-        </div>
-      </li>
-    <% } %>
-  </ul>
-</div>
+          a(href="/articles/#{article.slug}") #{article.title}
+        .article-item-body
+          p #{article.excerpt}
+        .article-item-tags
+          each val in article.tags
+            span.label.label-warning= val
+        .article-item-footer
+          p
+            strong POSTED BY 
+            span.redfc #{article.authors} - #{article.date}
